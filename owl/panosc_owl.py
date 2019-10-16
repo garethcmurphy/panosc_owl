@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """create owl"""
+import types
 import owlready2
 
 
@@ -32,31 +33,48 @@ def main():
     class Scattering(Techniques):
         """class emission"""
 
-    exafs = Absorption("Extended X-Ray Absorption Fine Structure (EXAFS)")
+    with onto:
+        newclass = types.new_class("EXAFS", (Absorption,))
+    # exafs = Absorption("Extended X-Ray Absorption Fine Structure (EXAFS)")
     exafs = Absorption("IR spectroscopy")
     exafs = Absorption("Near edge X-ray absorption fine structure (NEXAFS)")
     exafs = Absorption("Time-resolved studies")
     exafs = Absorption("Ultraviolet circular dichroism (UVCD)")
     exafs = Absorption("X-ray magnetic circular dichroism (XMCD)")
 
-    exafs = Diffraction("Ellipsometry")
-    exafs = Diffraction("Micro XRF")
-    exafs = Diffraction("Polarimetry")
-    exafs = Diffraction("Reflectometry ")
-    exafs = Diffraction("Time-resolved studies")
-    exafs = Diffraction("X-ray excited optical luminescence (XEOL)")
-    exafs = Diffraction("X-ray fluorescence (XRF)")
+    exafs = Diffraction("Crystallography")
+    exafs = Diffraction("Crystallography (biological macromolecules)")
+    exafs = Diffraction("Power diffraction")
+    exafs = Diffraction("Surface Diffraction")
+    exafs = Diffraction("Time resolved studies")
+    exafs = Diffraction("Topography")
 
     exafs = Emission("Ellipsometry")
+    exafs = Emission("Micro XRF")
+    exafs = Emission("Polarimetry")
+    exafs = Emission("Reflectometry ")
+    exafs = Emission("Time-resolved studies")
+    exafs = Emission("X-ray excited optical luminescence (XEOL)")
+    exafs = Emission("X-ray fluorescence (XRF)")
 
     exafs = Imaging("Ellipsometry")
+    exafs = Imaging("Coherent diffractive imaging")
+    exafs = Imaging("Fluorescence imaging")
+    exafs = Imaging("IR Microscopy")
+    exafs = Imaging("Medical application")
+    exafs = Imaging("Photoemission EM")
+    exafs = Imaging("Ptychography")
+    exafs = Imaging("Scanning photoemission EM")
+    exafs = Imaging("THz near-field microscopy")
+    exafs = Imaging("X-ray holography")
+    exafs = Imaging("X-ray microscopy")
+    exafs = Imaging("X-ray tomography")
 
     exafs = IonSpectroscopy("Ellipsometry")
 
     exafs = Lithography("Ellipsometry")
 
     exafs = Scattering("Ellipsometry")
-
 
     onto.save()
 

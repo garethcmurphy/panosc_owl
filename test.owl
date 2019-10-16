@@ -40,9 +40,9 @@
   <rdfs:subClassOf rdf:resource="#Techniques"/>
 </owl:Class>
 
-<Absorption rdf:about="#Extended X-Ray Absorption Fine Structure (EXAFS)">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Absorption>
+<owl:Class rdf:about="#EXAFS">
+  <rdfs:subClassOf rdf:resource="#Absorption"/>
+</owl:Class>
 
 <Absorption rdf:about="#IR spectroscopy">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -54,7 +54,7 @@
 
 <Absorption rdf:about="#Time-resolved studies">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#Diffraction"/>
+  <rdf:type rdf:resource="#Emission"/>
 </Absorption>
 
 <Absorption rdf:about="#Ultraviolet circular dichroism (UVCD)">
@@ -65,30 +65,98 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </Absorption>
 
-<Diffraction rdf:about="#Ellipsometry">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#Emission"/>
-</Diffraction>
-
-<Diffraction rdf:about="#Micro XRF">
+<Diffraction rdf:about="#Crystallography">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </Diffraction>
 
-<Diffraction rdf:about="#Polarimetry">
+<Diffraction rdf:about="#Crystallography (biological macromolecules)">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </Diffraction>
 
-<Diffraction rdf:about="#Reflectometry ">
+<Diffraction rdf:about="#Power diffraction">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </Diffraction>
 
-<Diffraction rdf:about="#X-ray excited optical luminescence (XEOL)">
+<Diffraction rdf:about="#Surface Diffraction">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </Diffraction>
 
-<Diffraction rdf:about="#X-ray fluorescence (XRF)">
+<Diffraction rdf:about="#Time resolved studies">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </Diffraction>
+
+<Diffraction rdf:about="#Topography">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Diffraction>
+
+<Emission rdf:about="#Ellipsometry">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Imaging"/>
+</Emission>
+
+<Emission rdf:about="#Micro XRF">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Emission>
+
+<Emission rdf:about="#Polarimetry">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Emission>
+
+<Emission rdf:about="#Reflectometry ">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Emission>
+
+<Emission rdf:about="#X-ray excited optical luminescence (XEOL)">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Emission>
+
+<Emission rdf:about="#X-ray fluorescence (XRF)">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Emission>
+
+<Imaging rdf:about="#Coherent diffractive imaging">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Imaging>
+
+<Imaging rdf:about="#Fluorescence imaging">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Imaging>
+
+<Imaging rdf:about="#IR Microscopy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Imaging>
+
+<Imaging rdf:about="#Medical application">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Imaging>
+
+<Imaging rdf:about="#Photoemission EM">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Imaging>
+
+<Imaging rdf:about="#Ptychography">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Imaging>
+
+<Imaging rdf:about="#Scanning photoemission EM">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Imaging>
+
+<Imaging rdf:about="#THz near-field microscopy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Imaging>
+
+<Imaging rdf:about="#X-ray holography">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Imaging>
+
+<Imaging rdf:about="#X-ray microscopy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Imaging>
+
+<Imaging rdf:about="#X-ray tomography">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Imaging>
 
 
 </rdf:RDF>
