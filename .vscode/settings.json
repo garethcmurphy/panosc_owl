@@ -1,0 +1,8 @@
+{
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#32284C",
+        "titleBar.activeBackground": "#46386A",
+        "titleBar.activeForeground": "#FAF9FC"
+    },
+    "python.pythonPath": "/Users/garethmurphy/.local/share/virtualenvs/panosc_owl-yiccGwgD/bin/python"
+}
