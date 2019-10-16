@@ -8,6 +8,10 @@
 
 <owl:Ontology rdf:about="file://test.owl"/>
 
+<owl:Class rdf:about="#Absorption">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
 <owl:Class rdf:about="#Emission">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
 </owl:Class>
