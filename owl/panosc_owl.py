@@ -34,20 +34,19 @@ def main():
         """class emission"""
 
     with onto:
-        newclass = types.new_class("EXAFS", (Absorption,))
-    # exafs = Absorption("Extended X-Ray Absorption Fine Structure (EXAFS)")
-    exafs = Absorption("IR spectroscopy")
-    exafs = Absorption("Near edge X-ray absorption fine structure (NEXAFS)")
-    exafs = Absorption("Time-resolved studies")
-    exafs = Absorption("Ultraviolet circular dichroism (UVCD)")
-    exafs = Absorption("X-ray magnetic circular dichroism (XMCD)")
+        newclass = types.new_class("ExtendedXRayAbsorptionFineStructure", (Absorption,))
+        exafs = types.new_class("InfraRedSpectroscopy", (Absorption,))
+        exafs = types.new_class("NearEdgeXrayAbsorptionFineStructure", (Absorption,))
+        exafs = types.new_class("TimeResolvedStudies", (Absorption,))
+        exafs = types.new_class("UltravioletCircularDichroism", (Absorption,))
+        exafs = types.new_class("XrayMagneticCircularDichroism", (Absorption,))
 
-    exafs = Diffraction("Crystallography")
-    exafs = Diffraction("Crystallography (biological macromolecules)")
-    exafs = Diffraction("Power diffraction")
-    exafs = Diffraction("Surface Diffraction")
-    exafs = Diffraction("Time resolved studies")
-    exafs = Diffraction("Topography")
+    exafs = types.new_class("Crystallography", (Diffraction,))
+    exafs = types.new_class("CrystallographyBiologicalMacromolecules", (Diffraction,))
+    exafs = types.new_class("PowerDiffraction", (Diffraction,))
+    exafs = types.new_class("SurfaceDiffraction", (Diffraction,))
+    exafs = types.new_class("TimeResolvedStudies", (Diffraction,))
+    exafs = types.new_class("Topography", (Diffraction,))
 
     exafs = Emission("Ellipsometry")
     exafs = Emission("Micro XRF")

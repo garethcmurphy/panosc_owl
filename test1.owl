@@ -54,7 +54,6 @@
 
 <owl:Class rdf:about="#TimeResolvedStudies">
   <rdfs:subClassOf rdf:resource="#Absorption"/>
-  <rdfs:subClassOf rdf:resource="#Diffraction"/>
 </owl:Class>
 
 <owl:Class rdf:about="#UltravioletCircularDichroism">
@@ -65,25 +64,29 @@
   <rdfs:subClassOf rdf:resource="#Absorption"/>
 </owl:Class>
 
-<owl:Class rdf:about="#Crystallography">
-  <rdfs:subClassOf rdf:resource="#Diffraction"/>
-</owl:Class>
+<Diffraction rdf:about="#Crystallography">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Diffraction>
 
-<owl:Class rdf:about="#CrystallographyBiologicalMacromolecules">
-  <rdfs:subClassOf rdf:resource="#Diffraction"/>
-</owl:Class>
+<Diffraction rdf:about="#Crystallography (biological macromolecules)">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Diffraction>
 
-<owl:Class rdf:about="#PowerDiffraction">
-  <rdfs:subClassOf rdf:resource="#Diffraction"/>
-</owl:Class>
+<Diffraction rdf:about="#Power diffraction">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Diffraction>
 
-<owl:Class rdf:about="#SurfaceDiffraction">
-  <rdfs:subClassOf rdf:resource="#Diffraction"/>
-</owl:Class>
+<Diffraction rdf:about="#Surface Diffraction">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Diffraction>
 
-<owl:Class rdf:about="#Topography">
-  <rdfs:subClassOf rdf:resource="#Diffraction"/>
-</owl:Class>
+<Diffraction rdf:about="#Time resolved studies">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Diffraction>
+
+<Diffraction rdf:about="#Topography">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Diffraction>
 
 <Emission rdf:about="#Ellipsometry">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
