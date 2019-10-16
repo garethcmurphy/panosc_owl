@@ -14,8 +14,14 @@ def main():
     class Absorption(Techniques):
         """class absorption"""
 
+    class Diffraction(Techniques):
+        """class emission"""
+
     class Emission(Techniques):
-        """class absorption"""
+        """class emission"""
+
+    class Imaging(Techniques):
+        """class emission"""
 
     exafs = Absorption("Extended X-Ray Absorption Fine Structure (EXAFS)")
     exafs = Absorption("IR spectroscopy")
@@ -23,6 +29,8 @@ def main():
     exafs = Absorption("Time-resolved studies")
     exafs = Absorption("Ultraviolet circular dichroism (UVCD)")
     exafs = Absorption("X-ray magnetic circular dichroism (XMCD)")
+
+    exafs = Emission("Ellipsometry")
 
 
     onto.save()
