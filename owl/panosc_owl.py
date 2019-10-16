@@ -3,5 +3,7 @@ from owlready2 import *
 
 onto = get_ontology("http://test.org/onto.owl")
 
-class Drug(Thing):
+class Emission(Thing):
     namespace = onto
+
+print(Emssion.iri)
