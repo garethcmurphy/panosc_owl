@@ -52,9 +52,8 @@
   <rdfs:subClassOf rdf:resource="#Absorption"/>
 </owl:Class>
 
-<owl:Class rdf:about="#TimeResolvedStudies">
+<owl:Class rdf:about="#AbsorptionTimeResolvedStudies">
   <rdfs:subClassOf rdf:resource="#Absorption"/>
-  <rdfs:subClassOf rdf:resource="#Diffraction"/>
 </owl:Class>
 
 <owl:Class rdf:about="#UltravioletCircularDichroism">
@@ -81,82 +80,153 @@
   <rdfs:subClassOf rdf:resource="#Diffraction"/>
 </owl:Class>
 
+<owl:Class rdf:about="#DiffractionTimeResolvedStudies">
+  <rdfs:subClassOf rdf:resource="#Diffraction"/>
+</owl:Class>
+
 <owl:Class rdf:about="#Topography">
   <rdfs:subClassOf rdf:resource="#Diffraction"/>
 </owl:Class>
 
-<Emission rdf:about="#Ellipsometry">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#Imaging"/>
-</Emission>
+<owl:Class rdf:about="#Ellipsometry">
+  <rdfs:subClassOf rdf:resource="#Emission"/>
+</owl:Class>
 
-<Emission rdf:about="#Micro XRF">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Emission>
+<owl:Class rdf:about="#MicroXrayFluorescence">
+  <rdfs:subClassOf rdf:resource="#Emission"/>
+</owl:Class>
 
-<Emission rdf:about="#Polarimetry">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Emission>
+<owl:Class rdf:about="#Polarimetry">
+  <rdfs:subClassOf rdf:resource="#Emission"/>
+</owl:Class>
 
-<Emission rdf:about="#Reflectometry ">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Emission>
+<owl:Class rdf:about="#Reflectometry ">
+  <rdfs:subClassOf rdf:resource="#Emission"/>
+</owl:Class>
 
-<Emission rdf:about="#Time-resolved studies">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Emission>
+<owl:Class rdf:about="#EmissionTimeResolvedStudies">
+  <rdfs:subClassOf rdf:resource="#Emission"/>
+</owl:Class>
 
-<Emission rdf:about="#X-ray excited optical luminescence (XEOL)">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Emission>
+<owl:Class rdf:about="#XrayExcitedOpticalLuminescence">
+  <rdfs:subClassOf rdf:resource="#Emission"/>
+</owl:Class>
 
-<Emission rdf:about="#X-ray fluorescence (XRF)">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Emission>
+<owl:Class rdf:about="#XrayFluorescence">
+  <rdfs:subClassOf rdf:resource="#Emission"/>
+</owl:Class>
 
-<Imaging rdf:about="#Coherent diffractive imaging">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Imaging>
+<owl:Class rdf:about="#CoherentDiffractiveImaging">
+  <rdfs:subClassOf rdf:resource="#Imaging"/>
+</owl:Class>
 
-<Imaging rdf:about="#Fluorescence imaging">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Imaging>
+<owl:Class rdf:about="#FluorescenceImaging">
+  <rdfs:subClassOf rdf:resource="#Imaging"/>
+</owl:Class>
 
-<Imaging rdf:about="#IR Microscopy">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Imaging>
+<owl:Class rdf:about="#InfraRedMicroscopy">
+  <rdfs:subClassOf rdf:resource="#Imaging"/>
+</owl:Class>
 
-<Imaging rdf:about="#Medical application">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Imaging>
+<owl:Class rdf:about="#MedicalApplications">
+  <rdfs:subClassOf rdf:resource="#Imaging"/>
+</owl:Class>
 
-<Imaging rdf:about="#Photoemission EM">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Imaging>
+<owl:Class rdf:about="#PhotoemissionElectronMicroscopy">
+  <rdfs:subClassOf rdf:resource="#Imaging"/>
+</owl:Class>
 
-<Imaging rdf:about="#Ptychography">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Imaging>
+<owl:Class rdf:about="#Ptychography">
+  <rdfs:subClassOf rdf:resource="#Imaging"/>
+</owl:Class>
 
-<Imaging rdf:about="#Scanning photoemission EM">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Imaging>
+<owl:Class rdf:about="#ScanningPhotoemissionElectronMicroscopy">
+  <rdfs:subClassOf rdf:resource="#Imaging"/>
+</owl:Class>
 
-<Imaging rdf:about="#THz near-field microscopy">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Imaging>
+<owl:Class rdf:about="#TeraHertzNearFieldMicroscopy">
+  <rdfs:subClassOf rdf:resource="#Imaging"/>
+</owl:Class>
 
-<Imaging rdf:about="#X-ray holography">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Imaging>
+<owl:Class rdf:about="#XrayHolography">
+  <rdfs:subClassOf rdf:resource="#Imaging"/>
+</owl:Class>
 
-<Imaging rdf:about="#X-ray microscopy">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Imaging>
+<owl:Class rdf:about="#XrayMicroscopy">
+  <rdfs:subClassOf rdf:resource="#Imaging"/>
+</owl:Class>
 
-<Imaging rdf:about="#X-ray tomography">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Imaging>
+<owl:Class rdf:about="#XrayTomography">
+  <rdfs:subClassOf rdf:resource="#Imaging"/>
+</owl:Class>
+
+<owl:Class rdf:about="#IonImaging">
+  <rdfs:subClassOf rdf:resource="#IonSpectroscopy"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MassSpectrometry">
+  <rdfs:subClassOf rdf:resource="#IonSpectroscopy"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ExtremeUltraVioletLithography">
+  <rdfs:subClassOf rdf:resource="#Lithography"/>
+</owl:Class>
+
+<owl:Class rdf:about="#XrayLithography">
+  <rdfs:subClassOf rdf:resource="#Lithography"/>
+</owl:Class>
+
+<owl:Class rdf:about="#AnomalousScattering">
+  <rdfs:subClassOf rdf:resource="#Scattering"/>
+</owl:Class>
+
+<owl:Class rdf:about="#CoherentScattering">
+  <rdfs:subClassOf rdf:resource="#Scattering"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ElasticScattering">
+  <rdfs:subClassOf rdf:resource="#Scattering"/>
+</owl:Class>
+
+<owl:Class rdf:about="#InelasticScattering">
+  <rdfs:subClassOf rdf:resource="#Scattering"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MagneticScattering">
+  <rdfs:subClassOf rdf:resource="#Scattering"/>
+</owl:Class>
+
+<owl:Class rdf:about="#NuclearResonantScattering">
+  <rdfs:subClassOf rdf:resource="#Scattering"/>
+</owl:Class>
+
+<owl:Class rdf:about="#QuasiElasticNeutronScattering">
+  <rdfs:subClassOf rdf:resource="#Scattering"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Reflectivity">
+  <rdfs:subClassOf rdf:resource="#Scattering"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ResonantScattering">
+  <rdfs:subClassOf rdf:resource="#Scattering"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SmallAngleScattering">
+  <rdfs:subClassOf rdf:resource="#Scattering"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SmallAngleNeutronScattering">
+  <rdfs:subClassOf rdf:resource="#Scattering"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TimeResolvedScattering">
+  <rdfs:subClassOf rdf:resource="#Scattering"/>
+</owl:Class>
+
+<owl:Class rdf:about="#WideAngleScattering">
+  <rdfs:subClassOf rdf:resource="#Scattering"/>
+</owl:Class>
 
 
 </rdf:RDF>
