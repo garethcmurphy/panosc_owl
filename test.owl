@@ -16,7 +16,27 @@
   <rdfs:subClassOf rdf:resource="#Techniques"/>
 </owl:Class>
 
+<owl:Class rdf:about="#Diffraction">
+  <rdfs:subClassOf rdf:resource="#Techniques"/>
+</owl:Class>
+
 <owl:Class rdf:about="#Emission">
+  <rdfs:subClassOf rdf:resource="#Techniques"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Imaging">
+  <rdfs:subClassOf rdf:resource="#Techniques"/>
+</owl:Class>
+
+<owl:Class rdf:about="#IonSpectroscopy">
+  <rdfs:subClassOf rdf:resource="#Techniques"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Lithography">
+  <rdfs:subClassOf rdf:resource="#Techniques"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Scattering">
   <rdfs:subClassOf rdf:resource="#Techniques"/>
 </owl:Class>
 
@@ -34,6 +54,7 @@
 
 <Absorption rdf:about="#Time-resolved studies">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Diffraction"/>
 </Absorption>
 
 <Absorption rdf:about="#Ultraviolet circular dichroism (UVCD)">
@@ -43,6 +64,31 @@
 <Absorption rdf:about="#X-ray magnetic circular dichroism (XMCD)">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </Absorption>
+
+<Diffraction rdf:about="#Ellipsometry">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Emission"/>
+</Diffraction>
+
+<Diffraction rdf:about="#Micro XRF">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Diffraction>
+
+<Diffraction rdf:about="#Polarimetry">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Diffraction>
+
+<Diffraction rdf:about="#Reflectometry ">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Diffraction>
+
+<Diffraction rdf:about="#X-ray excited optical luminescence (XEOL)">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Diffraction>
+
+<Diffraction rdf:about="#X-ray fluorescence (XRF)">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Diffraction>
 
 
 </rdf:RDF>
