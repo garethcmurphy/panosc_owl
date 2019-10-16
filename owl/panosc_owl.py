@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """create owl"""
+import re
 import types
 import owlready2
 
@@ -34,7 +35,7 @@ def main():
         """class emission"""
 
     with onto:
-        newclass = types.new_class(
+        exafs = types.new_class(
             "ExtendedXRayAbsorptionFineStructure", (Absorption,))
         exafs = types.new_class("InfraRedSpectroscopy", (Absorption,))
         exafs = types.new_class(
@@ -65,7 +66,8 @@ def main():
     exafs = types.new_class("MedicalApplications", (Imaging,))
     exafs = types.new_class("PhotoemissionElectronMicroscopy", (Imaging,))
     exafs = types.new_class("Ptychography", (Imaging,))
-    exafs = types.new_class("ScanningPhotoemissionElectronMicroscopy", (Imaging,))
+    exafs = types.new_class(
+        "ScanningPhotoemissionElectronMicroscopy", (Imaging,))
     exafs = types.new_class("TeraHertzNearFieldMicroscopy", (Imaging,))
     exafs = types.new_class("XrayHolography", (Imaging,))
     exafs = types.new_class("XrayMicroscopy", (Imaging,))
@@ -90,6 +92,20 @@ def main():
     exafs = types.new_class("SmallAngleNeutronScattering", (Scattering,))
     exafs = types.new_class("TimeResolvedScattering", (Scattering,))
     exafs = types.new_class("WideAngleScattering", (Scattering,))
+    # print(list(onto.classes()))
+
+    techiques = [Absorption,
+                 Diffraction, Emission, Imaging,
+                 IonSpectroscopy, Lithography, Scattering]
+    for technique in techiques:
+        scatter = list(onto.search(subclass_of=technique))
+        print("\n")
+        print(technique.name)
+        print("\n")
+        for i in scatter:
+            if i.name != technique.name:
+                label = re.sub("([a-z])([A-Z])","\g<1> \g<2>",i.name)
+                print("* ", label)
 
     onto.save()
 
