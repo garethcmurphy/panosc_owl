@@ -8,13 +8,41 @@
 
 <owl:Ontology rdf:about="file://test.owl"/>
 
-<owl:Class rdf:about="#Absorption">
+<owl:Class rdf:about="#Techniques">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
 </owl:Class>
 
-<owl:Class rdf:about="#Emission">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<owl:Class rdf:about="#Absorption">
+  <rdfs:subClassOf rdf:resource="#Techniques"/>
 </owl:Class>
+
+<owl:Class rdf:about="#Emission">
+  <rdfs:subClassOf rdf:resource="#Techniques"/>
+</owl:Class>
+
+<Absorption rdf:about="#Extended X-Ray Absorption Fine Structure (EXAFS)">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Absorption>
+
+<Absorption rdf:about="#IR spectroscopy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Absorption>
+
+<Absorption rdf:about="#Near edge X-ray absorption fine structure (NEXAFS)">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Absorption>
+
+<Absorption rdf:about="#Time-resolved studies">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Absorption>
+
+<Absorption rdf:about="#Ultraviolet circular dichroism (UVCD)">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Absorption>
+
+<Absorption rdf:about="#X-ray magnetic circular dichroism (XMCD)">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Absorption>
 
 
 </rdf:RDF>
