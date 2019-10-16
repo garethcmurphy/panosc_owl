@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
-from owlready2 import *
+"""create owl"""
+import owlready2 
 
-onto = get_ontology("http://test.org/onto.owl")
+onto = owlready2.get_ontology("http://test.org/onto.owl")
 
-class Emission(Thing):
+class Emission(owlready2.Thing):
+    """class emission"""
     namespace = onto
 
-print(Emssion.iri)
+print(Emission.iri)
