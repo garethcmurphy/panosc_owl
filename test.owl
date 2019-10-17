@@ -15,12 +15,12 @@
 
 <owl:Class rdf:about="#Absorption">
   <rdfs:subClassOf rdf:resource="#Technique"/>
-  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scientific technique based on absorption</rdfs:comment>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spectroscopic techniques that measure the absorption of radiation, as a function of frequency or wavelength, due to its interaction with a sample</rdfs:comment>
 </owl:Class>
 
 <owl:Class rdf:about="#Diffraction">
   <rdfs:subClassOf rdf:resource="#Technique"/>
-  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scientific technique based on diffraction</rdfs:comment>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> X-ray, neutron, or electron diffraction on samples for structural characterization of materials</rdfs:comment>
 </owl:Class>
 
 <owl:Class rdf:about="#Emission">
