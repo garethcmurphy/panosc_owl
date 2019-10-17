@@ -15,7 +15,7 @@
 
 <owl:Class rdf:about="#Absorption">
   <rdfs:subClassOf rdf:resource="#Technique"/>
-  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scientific technqiue based on absorption</rdfs:comment>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scientific technique based on absorption</rdfs:comment>
 </owl:Class>
 
 <owl:Class rdf:about="#Diffraction">
@@ -52,6 +52,14 @@
   <rdfs:subClassOf rdf:resource="#Absorption"/>
 </owl:Class>
 
+<owl:Class rdf:about="#InelasticNeutronScatteringSpectroscopy">
+  <rdfs:subClassOf rdf:resource="#Absorption"/>
+</owl:Class>
+
+<owl:Class rdf:about="#NeutronSpectroscopy">
+  <rdfs:subClassOf rdf:resource="#Absorption"/>
+</owl:Class>
+
 <owl:Class rdf:about="#NearEdgeXrayAbsorptionFineStructure">
   <rdfs:subClassOf rdf:resource="#Absorption"/>
 </owl:Class>
@@ -76,7 +84,11 @@
   <rdfs:subClassOf rdf:resource="#Diffraction"/>
 </owl:Class>
 
-<owl:Class rdf:about="#PowerDiffraction">
+<owl:Class rdf:about="#NeutronDiffraction">
+  <rdfs:subClassOf rdf:resource="#Diffraction"/>
+</owl:Class>
+
+<owl:Class rdf:about="#PowderDiffraction">
   <rdfs:subClassOf rdf:resource="#Diffraction"/>
 </owl:Class>
 
@@ -105,6 +117,10 @@
 </owl:Class>
 
 <owl:Class rdf:about="#Reflectometry ">
+  <rdfs:subClassOf rdf:resource="#Emission"/>
+</owl:Class>
+
+<owl:Class rdf:about="#NeutronReflectometry ">
   <rdfs:subClassOf rdf:resource="#Emission"/>
 </owl:Class>
 
@@ -212,6 +228,10 @@
   <rdfs:subClassOf rdf:resource="#Scattering"/>
 </owl:Class>
 
+<owl:Class rdf:about="#PolarisedNeutronReflectivity">
+  <rdfs:subClassOf rdf:resource="#Scattering"/>
+</owl:Class>
+
 <owl:Class rdf:about="#ResonantScattering">
   <rdfs:subClassOf rdf:resource="#Scattering"/>
 </owl:Class>
@@ -221,6 +241,10 @@
 </owl:Class>
 
 <owl:Class rdf:about="#SmallAngleNeutronScattering">
+  <rdfs:subClassOf rdf:resource="#Scattering"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SpinEchoSmallAngleNeutronScattering">
   <rdfs:subClassOf rdf:resource="#Scattering"/>
 </owl:Class>
 
