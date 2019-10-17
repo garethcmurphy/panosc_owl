@@ -10,10 +10,10 @@ name = "pypi"
 cython = "*"
 pylint = "*"
 "autopep8" = "*"
+rope = "*"
 
 [requires]
 python_version = "3.7"
-
 
 [scripts]
 start = "./owl/panosc_owl.py"

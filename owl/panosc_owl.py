@@ -9,29 +9,36 @@ def main():
     """main"""
     onto = owlready2.get_ontology("file://test.owl")
 
-    class Techniques(owlready2.Thing):
+    class Technique(owlready2.Thing):
         """class emission"""
         namespace = onto
 
-    class Absorption(Techniques):
+    Technique.comment = ["A scientific technique"]
+
+    class Absorption(Technique):
         """class absorption"""
 
-    class Diffraction(Techniques):
+    Absorption.comment = ["Scientific technqiue based on absorption"]
+
+    class Diffraction(Technique):
+        """class diffraction"""
+    Diffraction.comment = ["Scientific technique based on diffraction"]
+
+    class Emission(Technique):
         """class emission"""
 
-    class Emission(Techniques):
+    Emission.comment = ["Scientific technique based on emission"]
+
+    class Imaging(Technique):
         """class emission"""
 
-    class Imaging(Techniques):
+    class IonSpectroscopy(Technique):
         """class emission"""
 
-    class IonSpectroscopy(Techniques):
+    class Lithography(Technique):
         """class emission"""
 
-    class Lithography(Techniques):
-        """class emission"""
-
-    class Scattering(Techniques):
+    class Scattering(Technique):
         """class emission"""
 
     with onto:

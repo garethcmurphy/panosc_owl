@@ -8,36 +8,40 @@
 
 <owl:Ontology rdf:about="file://test.owl"/>
 
-<owl:Class rdf:about="#Techniques">
+<owl:Class rdf:about="#Technique">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A scientific technique</rdfs:comment>
 </owl:Class>
 
 <owl:Class rdf:about="#Absorption">
-  <rdfs:subClassOf rdf:resource="#Techniques"/>
+  <rdfs:subClassOf rdf:resource="#Technique"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scientific technqiue based on absorption</rdfs:comment>
 </owl:Class>
 
 <owl:Class rdf:about="#Diffraction">
-  <rdfs:subClassOf rdf:resource="#Techniques"/>
+  <rdfs:subClassOf rdf:resource="#Technique"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scientific technique based on diffraction</rdfs:comment>
 </owl:Class>
 
 <owl:Class rdf:about="#Emission">
-  <rdfs:subClassOf rdf:resource="#Techniques"/>
+  <rdfs:subClassOf rdf:resource="#Technique"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scientific technique based on emission</rdfs:comment>
 </owl:Class>
 
 <owl:Class rdf:about="#Imaging">
-  <rdfs:subClassOf rdf:resource="#Techniques"/>
+  <rdfs:subClassOf rdf:resource="#Technique"/>
 </owl:Class>
 
 <owl:Class rdf:about="#IonSpectroscopy">
-  <rdfs:subClassOf rdf:resource="#Techniques"/>
+  <rdfs:subClassOf rdf:resource="#Technique"/>
 </owl:Class>
 
 <owl:Class rdf:about="#Lithography">
-  <rdfs:subClassOf rdf:resource="#Techniques"/>
+  <rdfs:subClassOf rdf:resource="#Technique"/>
 </owl:Class>
 
 <owl:Class rdf:about="#Scattering">
-  <rdfs:subClassOf rdf:resource="#Techniques"/>
+  <rdfs:subClassOf rdf:resource="#Technique"/>
 </owl:Class>
 
 <owl:Class rdf:about="#ExtendedXRayAbsorptionFineStructure">
