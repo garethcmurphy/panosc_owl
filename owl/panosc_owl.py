@@ -9,25 +9,41 @@ def main():
     """main"""
     onto = owlready2.get_ontology("file://test.owl")
 
+    class FacilityType(owlready2.Thing):
+        """facility type"""
+        namespace = onto
+
+    class NeutronFacility(FacilityType):
+        namespace = onto
+
+    class SynchrotronFacility(FacilityType):
+        namespace = onto
+
     class Technique(owlready2.Thing):
         """class emission"""
         namespace = onto
+    
+    class HasForTechnique(owlready2.ObjectProperty):
+        domain = [FacilityType]
+        range = [Technique]
 
     Technique.comment = ["A scientific technique"]
 
     class Absorption(Technique):
         """class absorption"""
 
-    Absorption.comment = ["Spectroscopic techniques that measure the absorption of radiation, as a function of frequency or wavelength, due to its interaction with a sample"]
+    Absorption.comment = [
+        "Spectroscopic techniques that measure the absorption of radiation, as a function of frequency or wavelength, due to its interaction with a sample"]
 
     class Diffraction(Technique):
         """class diffraction"""
-    Diffraction.comment = [" X-ray, neutron, or electron diffraction on samples for structural characterization of materials"]
+    Diffraction.comment = [
+        " X-ray, neutron, or electron diffraction on samples for structural characterization of materials"]
 
-    class Emission(Technique):
+    class EmissionReflection(Technique):
         """class emission"""
 
-    Emission.comment = ["Scientific technique based on emission"]
+    EmissionReflection.comment = ["Scientific technique based on emission"]
 
     class Imaging(Technique):
         """class emission"""
@@ -45,13 +61,16 @@ def main():
         exafs = types.new_class(
             "ExtendedXRayAbsorptionFineStructure", (Absorption,))
         exafs = types.new_class("InfraRedSpectroscopy", (Absorption,))
-        exafs = types.new_class("InelasticNeutronScatteringSpectroscopy", (Absorption,))
+        exafs = types.new_class(
+            "InelasticNeutronScatteringSpectroscopy", (Absorption,))
         exafs = types.new_class("NeutronSpectroscopy", (Absorption,))
         exafs = types.new_class(
             "NearEdgeXrayAbsorptionFineStructure", (Absorption,))
         exafs = types.new_class("AbsorptionTimeResolvedStudies", (Absorption,))
         exafs = types.new_class("UltravioletCircularDichroism", (Absorption,))
         exafs = types.new_class("XrayMagneticCircularDichroism", (Absorption,))
+        exafs = types.new_class("XrayMagneticLinearDichroism", (Absorption,))
+        exafs = types.new_class("XrayNaturalLinearDichroism", (Absorption,))
 
     exafs = types.new_class("Crystallography", (Diffraction,))
     exafs = types.new_class(
@@ -62,14 +81,14 @@ def main():
     exafs = types.new_class("DiffractionTimeResolvedStudies", (Diffraction,))
     exafs = types.new_class("Topography", (Diffraction,))
 
-    exafs = types.new_class("Ellipsometry", (Emission,))
-    exafs = types.new_class("MicroXrayFluorescence", (Emission,))
-    exafs = types.new_class("Polarimetry", (Emission,))
-    exafs = types.new_class("Reflectometry ", (Emission,))
-    exafs = types.new_class("NeutronReflectometry ", (Emission,))
-    exafs = types.new_class("EmissionTimeResolvedStudies", (Emission,))
-    exafs = types.new_class("XrayExcitedOpticalLuminescence", (Emission,))
-    exafs = types.new_class("XrayFluorescence", (Emission,))
+    exafs = types.new_class("Ellipsometry", (EmissionReflection,))
+    exafs = types.new_class("MicroXrayFluorescence", (EmissionReflection,))
+    exafs = types.new_class("Polarimetry", (EmissionReflection,))
+    exafs = types.new_class("Reflectometry ", (EmissionReflection,))
+    exafs = types.new_class("NeutronReflectometry ", (EmissionReflection,))
+    exafs = types.new_class("EmissionTimeResolvedStudies", (EmissionReflection,))
+    exafs = types.new_class("XrayExcitedOpticalLuminescence", (EmissionReflection,))
+    exafs = types.new_class("XrayFluorescence", (EmissionReflection,))
 
     exafs = types.new_class("CoherentDiffractiveImaging", (Imaging,))
     exafs = types.new_class("FluorescenceImaging", (Imaging,))
@@ -102,14 +121,13 @@ def main():
     exafs = types.new_class("ResonantScattering", (Scattering,))
     exafs = types.new_class("SmallAngleScattering", (Scattering,))
     exafs = types.new_class("SmallAngleNeutronScattering", (Scattering,))
-    exafs = types.new_class("SpinEchoSmallAngleNeutronScattering", (Scattering,))
+    exafs = types.new_class(
+        "SpinEchoSmallAngleNeutronScattering", (Scattering,))
     exafs = types.new_class("TimeResolvedScattering", (Scattering,))
     exafs = types.new_class("WideAngleScattering", (Scattering,))
-    # print(list(onto.classes()))
 
-    techniques = [Absorption,
-                 Diffraction, Emission, Imaging,
-                 IonSpectroscopy, Lithography, Scattering]
+    techniques = [Absorption, Diffraction, EmissionReflection, Imaging,
+                  IonSpectroscopy, Lithography, Scattering]
     for technique in techniques:
         scatter = list(onto.search(subclass_of=technique))
         print("\n")

@@ -8,6 +8,18 @@
 
 <owl:Ontology rdf:about="file://test.owl"/>
 
+<owl:Class rdf:about="#FacilityType">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#NeutronFacility">
+  <rdfs:subClassOf rdf:resource="#FacilityType"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SynchrotronFacility">
+  <rdfs:subClassOf rdf:resource="#FacilityType"/>
+</owl:Class>
+
 <owl:Class rdf:about="#Technique">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A scientific technique</rdfs:comment>
@@ -23,7 +35,7 @@
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> X-ray, neutron, or electron diffraction on samples for structural characterization of materials</rdfs:comment>
 </owl:Class>
 
-<owl:Class rdf:about="#Emission">
+<owl:Class rdf:about="#EmissionReflection">
   <rdfs:subClassOf rdf:resource="#Technique"/>
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scientific technique based on emission</rdfs:comment>
 </owl:Class>
@@ -76,6 +88,14 @@
   <rdfs:subClassOf rdf:resource="#Absorption"/>
 </owl:Class>
 
+<owl:Class rdf:about="#XrayMagneticLinearDichroism">
+  <rdfs:subClassOf rdf:resource="#Absorption"/>
+</owl:Class>
+
+<owl:Class rdf:about="#XrayNaturalLinearDichroism">
+  <rdfs:subClassOf rdf:resource="#Absorption"/>
+</owl:Class>
+
 <owl:Class rdf:about="#Crystallography">
   <rdfs:subClassOf rdf:resource="#Diffraction"/>
 </owl:Class>
@@ -105,35 +125,35 @@
 </owl:Class>
 
 <owl:Class rdf:about="#Ellipsometry">
-  <rdfs:subClassOf rdf:resource="#Emission"/>
+  <rdfs:subClassOf rdf:resource="#EmissionReflection"/>
 </owl:Class>
 
 <owl:Class rdf:about="#MicroXrayFluorescence">
-  <rdfs:subClassOf rdf:resource="#Emission"/>
+  <rdfs:subClassOf rdf:resource="#EmissionReflection"/>
 </owl:Class>
 
 <owl:Class rdf:about="#Polarimetry">
-  <rdfs:subClassOf rdf:resource="#Emission"/>
+  <rdfs:subClassOf rdf:resource="#EmissionReflection"/>
 </owl:Class>
 
 <owl:Class rdf:about="#Reflectometry ">
-  <rdfs:subClassOf rdf:resource="#Emission"/>
+  <rdfs:subClassOf rdf:resource="#EmissionReflection"/>
 </owl:Class>
 
 <owl:Class rdf:about="#NeutronReflectometry ">
-  <rdfs:subClassOf rdf:resource="#Emission"/>
+  <rdfs:subClassOf rdf:resource="#EmissionReflection"/>
 </owl:Class>
 
 <owl:Class rdf:about="#EmissionTimeResolvedStudies">
-  <rdfs:subClassOf rdf:resource="#Emission"/>
+  <rdfs:subClassOf rdf:resource="#EmissionReflection"/>
 </owl:Class>
 
 <owl:Class rdf:about="#XrayExcitedOpticalLuminescence">
-  <rdfs:subClassOf rdf:resource="#Emission"/>
+  <rdfs:subClassOf rdf:resource="#EmissionReflection"/>
 </owl:Class>
 
 <owl:Class rdf:about="#XrayFluorescence">
-  <rdfs:subClassOf rdf:resource="#Emission"/>
+  <rdfs:subClassOf rdf:resource="#EmissionReflection"/>
 </owl:Class>
 
 <owl:Class rdf:about="#CoherentDiffractiveImaging">
