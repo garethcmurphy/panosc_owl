@@ -104,7 +104,7 @@ def main():
         print("\n")
         for i in scatter:
             if i.name != technique.name:
-                label = re.sub("([a-z])([A-Z])","\g<1> \g<2>",i.name)
+                label = re.sub("([a-z])([A-Z])", "\g<1> \g<2>", i.name)
                 print("* ", label)
 
     onto.save()
